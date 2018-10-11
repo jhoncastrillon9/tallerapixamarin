@@ -5,7 +5,17 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taller.apis", "taller.apis\taller.apis.csproj", "{0457B326-D75B-417F-BEB2-ED68070BCC8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taller.xamarin.Android", "taller.xamarin\taller.xamarin.Android\taller.xamarin.Android.csproj", "{B45AE63E-01CE-402C-8470-1B8C8901DCFF}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "taller.xamarin", "taller.xamarin\taller.xamarin\taller.xamarin.shproj", "{8122BAFE-C8B1-4642-9F4D-FC562B51D7EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaApi", "PruebaApi\PruebaApi.csproj", "{192ED230-3F9D-46A3-8191-34F7491CFBBE}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		taller.xamarin\taller.xamarin\taller.xamarin.projitems*{8122bafe-c8b1-4642-9f4d-fc562b51d7ee}*SharedItemsImports = 13
+		taller.xamarin\taller.xamarin\taller.xamarin.projitems*{b45ae63e-01ce-402c-8470-1b8c8901dcff}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -15,6 +25,16 @@ Global
 		{0457B326-D75B-417F-BEB2-ED68070BCC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0457B326-D75B-417F-BEB2-ED68070BCC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0457B326-D75B-417F-BEB2-ED68070BCC8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45AE63E-01CE-402C-8470-1B8C8901DCFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45AE63E-01CE-402C-8470-1B8C8901DCFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45AE63E-01CE-402C-8470-1B8C8901DCFF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B45AE63E-01CE-402C-8470-1B8C8901DCFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45AE63E-01CE-402C-8470-1B8C8901DCFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45AE63E-01CE-402C-8470-1B8C8901DCFF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{192ED230-3F9D-46A3-8191-34F7491CFBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192ED230-3F9D-46A3-8191-34F7491CFBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192ED230-3F9D-46A3-8191-34F7491CFBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192ED230-3F9D-46A3-8191-34F7491CFBBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

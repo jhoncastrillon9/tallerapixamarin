@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:taller.xamarin"
+             x:Class="taller.xamarin.MainPage"
+             Title="Publicaciones">
+
+    <ListView x:Name="ListPublicaciones">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Label Text="{Binding usuario}" FontAttributes="Bold" />
+                        <Label Grid.Column="1" Text="{Binding descripcion}" />
+                        <Label Grid.Column="2" Text="{Binding fechaPublicacion}"/>
+                        <Label Grid.Column="2" Text="{Binding meGusta}" HorizontalTextAlignment="End" />
+                    </Grid>
+                </ViewCell>               
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>  

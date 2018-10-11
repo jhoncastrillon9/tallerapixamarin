@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="tallerJFCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'tallerJFC.dbo.publicacion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="publicacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="usuario" Type="varchar" MaxLength="100" />
+          <Property Name="descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="fechaPublicacion" Type="date" />
+          <Property Name="meGusta" Type="int" />
+          <Property Name="meDisgusta" Type="int" />
+          <Property Name="vecesCompartido" Type="int" />
+          <Property Name="esPrivada" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="tallerJFCModelStoreContainer">
+          <EntitySet Name="publicacion" EntityType="Self.publicacion" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [publicacion].[id] AS [id], 
+    [publicacion].[usuario] AS [usuario], 
+    [publicacion].[descripcion] AS [descripcion], 
+    [publicacion].[fechaPublicacion] AS [fechaPublicacion], 
+    [publicacion].[meGusta] AS [meGusta], 
+    [publicacion].[meDisgusta] AS [meDisgusta], 
+    [publicacion].[vecesCompartido] AS [vecesCompartido], 
+    [publicacion].[esPrivada] AS [esPrivada]
+    FROM [dbo].[publicacion] AS [publicacion]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="tallerJFCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="publicacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="fechaPublicacion" Type="DateTime" Precision="0" />
+          <Property Name="meGusta" Type="Int32" />
+          <Property Name="meDisgusta" Type="Int32" />
+          <Property Name="vecesCompartido" Type="Int32" />
+          <Property Name="esPrivada" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="tallerJFCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="publicacion" EntityType="Self.publicacion" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="tallerJFCModelStoreContainer" CdmEntityContainer="tallerJFCEntities">
+          <EntitySetMapping Name="publicacion">
+            <EntityTypeMapping TypeName="tallerJFCModel.publicacion">
+              <MappingFragment StoreEntitySet="publicacion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="fechaPublicacion" ColumnName="fechaPublicacion" />
+                <ScalarProperty Name="meGusta" ColumnName="meGusta" />
+                <ScalarProperty Name="meDisgusta" ColumnName="meDisgusta" />
+                <ScalarProperty Name="vecesCompartido" ColumnName="vecesCompartido" />
+                <ScalarProperty Name="esPrivada" ColumnName="esPrivada" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
